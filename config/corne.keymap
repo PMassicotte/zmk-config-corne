@@ -10,7 +10,8 @@
 &led_strip { chain-length = <27>; };
 
 / {
- #include "macros.dtsi"
+     behaviors {
+        #include "macros.dtsi"
     #include "version.dtsi"
 
         hm: homerow_mods {
