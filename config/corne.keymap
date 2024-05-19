@@ -10,7 +10,7 @@
 &led_strip { chain-length = <27>; };
 
 / {
-     behaviors {
+    behaviors {
         #include "macros.dtsi"
     #include "version.dtsi"
 
@@ -24,6 +24,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -35,10 +36,55 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E          &kp R       &kp T        &kp Y    &kp U      &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D          &kp F       &kp G        &kp H    &kp J      &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C          &kp V       &kp B        &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &kp BACKSPACE  &kp DELETE  &kp SPACE    &kp RET  &kp ENTER  &kp SPACE
+&none  &kp Q  &kp W           &kp E          &kp R             &kp T        &kp Y    &kp U              &kp I        &kp O            &kp P     &none
+&none  &kp A  &hm LEFT_ALT S  &hm LCTRL D    &hm LEFT_SHIFT F  &lt 4 G      &kp H    &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &kp SEMI  &none
+&none  &kp Z  &kp X           &kp C          &lt 5 V           &lt 1 B      &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH  &none
+                              &kp BACKSPACE  &kp DELETE        &kp SPACE    &kp RET  &kp ENTER          &kp SPACE
+            >;
+        };
+
+        keypad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        fn {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        mod {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        arrow {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        symbols {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
