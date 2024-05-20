@@ -68,6 +68,16 @@
             bindings = <&kp PIPE>;
             key-positions = <40 19 8>;
         };
+
+        et {
+            bindings = <&kp RA(E)>;
+            key-positions = <3 4>;
+        };
+
+        est {
+            bindings = <&kp RA(GRAVE)>;
+            key-positions = <2 3>;
+        };
     };
 
     keymap {
@@ -126,10 +136,10 @@
 
         symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans                &trans
+&kp EXCL  &trans  &trans  &trans  &trans  &trans    &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &kp GRAVE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans  &trans
+                          &trans  &trans  &trans    &trans     &trans                &trans
             >;
         };
     };
