@@ -35,7 +35,7 @@
             bindings = <
 &none  &kp Q           &kp W           &kp E          &kp R             &kp T         &kp Y    &kp U              &kp I        &kp O            &kp P                    &none
 &none  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D    &hm LEFT_SHIFT F  &lt 4 G       &kp H    &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMICOLON  &none
-&none  &kp Z           &kp X           &kp C          &lt 5 V           &lt 1 B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &none
+&none  &kp Z           &kp X           &lt 2 C        &lt 5 V           &lt 1 B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &none
                                        &kp BACKSPACE  &kp DELETE        &kp ESCAPE    &kp TAB  &kp ENTER          &kp SPACE
             >;
         };
@@ -49,12 +49,12 @@
             >;
         };
 
-        fn {
+        media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_BACKLIGHT_TOGGLE  &trans  &trans  &trans  &trans  &kp C_VOLUME_UP
+&trans  &trans  &trans  &trans  &trans  &trans    &trans                  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN
+&trans  &trans  &trans  &trans  &trans  &trans    &trans                  &trans  &trans  &trans  &trans  &kp C_MUTE
+                        &trans  &trans  &trans    &trans                  &trans  &trans
             >;
         };
 
